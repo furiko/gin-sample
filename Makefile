@@ -20,6 +20,7 @@ docker/stop:
 
 docker/stop/server:
 	docker container stop $(SERVER_CONTAINER_NAME)
+	docker container rm $(SERVER_CONTAINER_NAME)
 
 run:
 	fresh
