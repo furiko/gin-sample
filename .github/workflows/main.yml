@@ -31,4 +31,4 @@ jobs:
         run:
           IMAGE_TAG=$(echo ${{ github.ref }} | sed -e "s#refs/tags/##g")
           docker build -t 211193617135.dkr.ecr.ap-northeast-1.amazonaws.com/gin-sample:$IMAGE_TAG
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker push 211193617135.dkr.ecr.ap-northeast-1.amazonaws.com/gin-sample:$IMAGE_TAG
