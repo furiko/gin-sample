@@ -28,6 +28,6 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.AWS_ECR_REPO_NAME }}
-        run:
+        run: |
           docker build -t 211193617135.dkr.ecr.ap-northeast-1.amazonaws.com/gin-sample:$GITHUB_SHA .
           docker push 211193617135.dkr.ecr.ap-northeast-1.amazonaws.com/gin-sample:$GITHUB_SHA
