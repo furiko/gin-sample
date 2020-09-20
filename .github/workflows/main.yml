@@ -24,7 +24,7 @@ jobs:
         run: go test -v ./server/handler
 
   build-and-push:
-    needs: test
+    needs: Server Test
     runs-on: ubuntu-18.04
     timeout-minutes: 300
 
