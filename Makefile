@@ -5,7 +5,7 @@ HOST_APP_BASE:=$(shell pwd)
 DOCKER_APP_BASE:=/go/src/github.com/furiko/gin-sample
 
 local/run:
-	$(MAKE) run
+	cd server && $(MAKE) run
 	@echo 'connect server port :8000 !!!'
 
 docker/run:
@@ -22,5 +22,3 @@ docker/stop/server:
 	docker container stop $(SERVER_CONTAINER_NAME)
 	docker container rm $(SERVER_CONTAINER_NAME)
 
-run:
-	fresh
